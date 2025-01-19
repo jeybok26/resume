@@ -1,0 +1,59 @@
+body {
+    background-color: grey;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: rgb(249, 249, 240);
+  }
+
+.header {
+    text-align: left;
+    font-family: "Lucida Bright";
+    margin: 10px;
+    background-color: brgb(249, 249, 240);
+    }
+
+    img {
+        height: 200px;
+        background-color: gold;
+      }
+    
+    .summary, .skills, .work-history, .education {
+    margin: 20px;
+    font-family: "Lucida Bright";
+    margin: 10px;
+    background-color: rgb(249, 249, 240);
+    padding: 10px;
+    }
+    
+    h2 {
+    border-bottom: 1px solid black;
+    }
+    
+    ul {
+    color: black;
+    list-style: square;
+    padding-left: 0;
+    list-style-position: inside;
+    }
+    .text-wrapper {    color: rgb(27, 24, 190); }
+    
+    li {
+    content: "";
+    font-family: "Lucida Bright";
+    }
+  
+  .circular {
+    border-radius: 100%
+  }
+
+  
+  /***************************ID SELECTORS************************/
+  
+  #profilepic {
+    size: 50px;
+  
+  }
