@@ -21,7 +21,7 @@ body {
         background-color: gold;
       }
     
-    .summary, .skills, .work-history, .education, .portfolio {
+    .summary, .skills, .work-history, .education, .portfolio, .btnbooking {
     margin: 20px 20px 30px;
     font-family: "Lucida Bright";
     margin: 10px;
