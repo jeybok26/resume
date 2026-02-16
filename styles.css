@@ -1,67 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
 body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     background-color: grey;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-    background-color: rgb(249, 249, 240);
-  }
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00adb5;
+}
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin-bottom: 4px;
+  border-radius: 3px;
+}
+
+/* Header */
 .header {
-    text-align: left;
-    font-family: "Lucida Bright";
-    margin: 10px;
-    background-color: brgb(249, 249, 240);
+    text-align: center;
+    padding: 40px 20px;
+    background: #00878e;
+    color: white;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid white;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+/* Sections */
+.section {
+    padding: 50px 10px;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+    border-left: 5px solid #004aad;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    color: #333;
+}
+
+.job, .education-item {
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+.skills-list li {
+    background: #00878e;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
     }
 
-    img {
-        height: 200px;
-        background-color: gold;
-      }
-    
-    .summary, .skills, .work-history, .education, .portfolio, .btnbooking {
-    margin: 20px 20px 30px;
-    font-family: "Lucida Bright";
-    margin: 10px;
-    background-color: rgb(249, 249, 240);
-    padding: 10px;
+
+    .nav-links li {
+        margin: 10px 0;
     }
 
-.footer {
-    margin: 20px 20px 30px;
-    font-family: "Lucida Bright";
-    margin: 10px;
-    background-color: rgb(249, 249, 240);
-    padding: 10px;
+    .nav-links.active {
+        display: flex;
     }
-    
-    h2 {
-    border-bottom: 1px solid black;
-    }
-    
-    ul {
-    color: black;
-    list-style: square;
-    padding-left: 0;
-    list-style-position: inside;
-    }
-    .text-wrapper {    color: rgb(27, 24, 190); }
-    
-    li {
-    content: "";
-    font-family: "Lucida Bright";
-    }
-  
-  .circular {
-    border-radius: 100%
-  }
 
-  
-  /***************************ID SELECTORS************************/
-  
-  #profilepic {
-    size: 50px;
-  
-  }
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.hamburger span {
+  transition: all 0.3s ease;
+}
+
+    .skills-list {
+        flex-direction: column;
+    }
+}
