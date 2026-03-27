@@ -92,6 +92,23 @@ header p {
   font-size: 1.2em;
 }
 
+a {
+  color: white; /* default link color */
+}
+
+a:hover {
+  color: yellow; /* when mouse hovers */
+}
+
+a:active {
+  color: red; /* when clicked */
+}
+
+a:visited {
+  color: lightgray; /* after visiting */
+}
+
+
 /* Sections */
 .section {
     padding: 50px 10px;
