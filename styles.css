@@ -94,6 +94,7 @@ header p {
 
 a {
   color: white; /* default link color */
+  text-decoration: none; /* Optional: remove underline */  
 }
 
 a:hover {
